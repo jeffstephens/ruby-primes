@@ -19,3 +19,15 @@ class TestPrimes < Test::Unit::TestCase
     assert_false isPrime(0)
   end
 end
+
+class TestPrimeEnumeration < Test::Unit::TestCase
+  def test_allprime
+    allPrimes = enumerateSmallerPrimes 3
+    assert_equal 3, allPrimes.length
+  end
+
+  def test_ten
+    toTen = enumerateSmallerPrimes 10
+    assert_equal 5, toTen.length
+  end
+end

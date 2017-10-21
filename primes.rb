@@ -13,3 +13,17 @@ def isPrime(n)
 
   return true
 end
+
+def enumerateSmallerPrimes(n)
+  primeList = []
+  for i in 1..n
+    if isPrime i
+      primeList.push i
+    end
+  end
+  return primeList
+end
+
+if ARGV.length >= 0
+  puts(enumerateSmallerPrimes(ARGV[0].to_i).join(", "))
+end
