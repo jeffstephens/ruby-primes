@@ -1,4 +1,4 @@
-#!/bin/ruby
+#!/usr/local/bin/ruby
 
 require 'test/unit'
 include Test::Unit::Assertions
