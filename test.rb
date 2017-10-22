@@ -15,19 +15,25 @@ class TestPrimes < Test::Unit::TestCase
     assert_true isPrime(2)
   end
 
-  def test_zero
+  def test_toosmall
     assert_false isPrime(0)
+    assert_false isPrime(1)
   end
 end
 
 class TestPrimeEnumeration < Test::Unit::TestCase
-  def test_allprime
+  def test_toosmall
     allPrimes = enumerateSmallerPrimes 3
-    assert_equal 3, allPrimes.length
+    assert_equal 2, allPrimes.length
+  end
+
+  def test_max_is_prime
+    allPrimes = enumerateSmallerPrimes 7
+    assert_equal [2, 3, 5, 7], allPrimes
   end
 
   def test_ten
     toTen = enumerateSmallerPrimes 10
-    assert_equal 5, toTen.length
+    assert_equal 4, toTen.length
   end
 end

@@ -1,7 +1,7 @@
 #!/usr/local/bin/ruby
 
 def isPrime(n)
-  if n == 0
+  if n < 2
     return false
   end
 
